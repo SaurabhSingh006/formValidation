@@ -1,0 +1,116 @@
+:root {
+  --error-color: #dc3545;
+  --success-color: #28a745;
+  --warning-color: #ffc107; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 1.8rem; }
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+h1 {
+  text-align: center; }
+
+input {
+  outline: none;
+  display: block;
+  width: 100%; }
+
+.form {
+  padding: 4rem;
+  border-radius: .5rem;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  width: 30vw; }
+  @media (max-width: 1080px) {
+    .form {
+      width: 38vw; } }
+  @media (max-width: 900px) {
+    .form {
+      width: 45vw; } }
+  @media (max-width: 768px) {
+    .form {
+      width: 60vw; } }
+  @media (max-width: 600px) {
+    .form {
+      width: 70vw; } }
+  @media (max-width: 500px) {
+    .form {
+      width: 90vw; } }
+  .form__field {
+    margin: 2rem 0rem; }
+  .form__input {
+    padding: .5rem;
+    border: 1px solid #00000070;
+    font-size: 2rem;
+    margin: .3rem; }
+  .form__submit {
+    width: 100%;
+    border: none;
+    outline: none;
+    width: 100%;
+    margin: 2rem 0rem 0rem;
+    padding: 1rem;
+    display: block;
+    cursor: pointer;
+    color: white;
+    background-image: linear-gradient(to right, #000000 0%, #0f9b0f 51%, #000000 100%);
+    padding: 10px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    border-radius: 5px; }
+    .form__submit:hover {
+      background-position: right center;
+      text-decoration: none; }
+  .form__forgot {
+    text-decoration: none;
+    font-size: 1.4rem;
+    display: block;
+    text-align: center; }
+  .form__remember {
+    display: block;
+    width: 100%;
+    margin-top: 2rem;
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #ee0979 0%, #ff6a00 51%, #ee0979 100%);
+    padding: 10px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 5px; }
+    .form__remember:hover {
+      background-position: right center;
+      text-decoration: none; }
+
+.form__field input:focus {
+  outline: none; }
+
+.form__field.error input {
+  border-color: var(--error-color); }
+
+.form__field.success input {
+  border-color: var(--success-color); }
+
+.form__field small {
+  color: var(--error-color); }

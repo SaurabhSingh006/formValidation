@@ -1,0 +1,151 @@
+//Variables
+:root {
+  --error-color: #dc3545;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px !IMPORTANT
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 1.8rem; 
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  text-align: center;  
+}
+
+input {
+  outline: none;
+  display: block;
+  width: 100%;
+}
+
+.form {
+  padding: 4rem;
+  border-radius: .5rem;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  width: 30vw;
+
+  @media(max-width: 1080px) {
+    width: 38vw;
+  }
+
+  @media(max-width: 900px) {
+    width: 45vw;
+  }
+
+  @media(max-width: 768px) {
+    width: 60vw;
+  }
+
+  @media(max-width: 600px) {
+    width: 70vw;
+  }
+
+  @media(max-width: 500px) {
+    width: 90vw;
+  }
+
+  &__field {
+    margin: 2rem 0rem; 
+  }
+
+  &__input { 
+    padding: .5rem;
+    border: 1px solid #00000070;
+    font-size: 2rem;
+    margin: .3rem;
+  }
+
+  &__submit {
+    width: 100%;
+
+    border: none;
+    outline: none;
+    width: 100%;
+    margin: 2rem 0rem 0rem; 
+    padding: 1rem; 
+    display: block;
+    cursor: pointer;
+    color: white; 
+
+    background-image: linear-gradient(to right, #000000 0%, #0f9b0f  51%, #000000  100%);
+    padding: 10px;  
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    border-radius: 5px; 
+
+    &:hover {
+      background-position: right center;
+      text-decoration: none;
+    }
+  }
+
+  &__forgot {
+    text-decoration: none;
+    font-size: 1.4rem;
+    display: block;
+    text-align: center;
+  }
+
+  &__remember {
+    display: block;
+    width: 100%;
+    margin-top: 2rem;
+
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #ee0979 0%, #ff6a00  51%, #ee0979  100%);
+    padding: 10px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;   
+    border-radius: 5px; 
+
+    &:hover {
+      background-position: right center;  
+      text-decoration: none;
+    }
+  }
+} 
+
+
+.form__field input:focus {
+  outline: none;
+}
+
+.form__field.error input {
+  border-color: var(--error-color);
+}
+
+.form__field.success input {
+  border-color: var(--success-color);
+}
+.form__field small {
+  color: var(--error-color);  
+}
+   
